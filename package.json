@@ -1,0 +1,21 @@
+{
+  "name": "react-for-atom",
+  "version": "0.0.1",
+  "description": "Require this to get a single instance of React in Atom. Addons are lazily loaded.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgebhardt/react-for-atom.git"
+  },
+  "author": "Jonas Gebhardt (jxg@fb.com)",
+  "bugs": {
+    "url": "https://github.com/jgebhardt/react-for-atom/issues"
+  },
+  "homepage": "https://github.com/jgebhardt/react-for-atom#readme",
+  "dependencies": {
+    "react": "0.13.2"
+  }
+}
