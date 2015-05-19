@@ -2,7 +2,7 @@ var React;
 
 if (window) {
   // circumvent React Dev Tools console warning
-  window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = null;
+  window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = {};
 }
 
 function _injectCustomConfig() {
