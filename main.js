@@ -1,7 +1,9 @@
 var React;
 
-// circumvent React Dev Tools console warning
-window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = null;
+if (window) {
+  // circumvent React Dev Tools console warning
+  window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = null;
+}
 
 function _injectCustomConfig() {
   var ReactInjection = require('react/lib/ReactInjection');
