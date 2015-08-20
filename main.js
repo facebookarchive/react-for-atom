@@ -8,13 +8,13 @@ if (window) {
 function _injectCustomConfig() {
   var ReactInjection = require('react/lib/ReactInjection');
   var customAttributes = {
-    mini: ReactInjection.DOMProperty.HAS_BOOLEAN_VALUE,
+    mini: ReactInjection.DOMProperty.HAS_BOOLEAN_VALUE
   };
   var AtomDOMPropertyConfig = {
     isCustomAttribute: function(attributeName) {
       return customAttributes[attributeName] !== undefined;
     },
-    Properties: customAttributes,
+    Properties: customAttributes
   };
   ReactInjection.DOMProperty.injectDOMPropertyConfig(AtomDOMPropertyConfig);
 }
@@ -25,17 +25,17 @@ if (typeof atom === 'object' && atom !== null) {
     _injectCustomConfig();
     var addons;
     Object.defineProperty(React, 'addons', {
-      get() {
+      get: function get() {
         if (!addons) {
           React = require('react/addons');
         }
         return addons;
       },
-      set(val) {
+      set: function set(val) {
         addons = val;
       },
       enumerable: false,
-    })
+    });
     atom.__DO_NOT_ACCESS_React_Singleton = React;
   } else {
     React = atom.__DO_NOT_ACCESS_React_Singleton;
