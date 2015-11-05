@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jgebhardt/react-for-atom.git"
   },
+  "license": "BSD-3-Clause",
   "author": "Jonas Gebhardt (jxg@fb.com)",
   "bugs": {
     "url": "https://github.com/jgebhardt/react-for-atom/issues"
