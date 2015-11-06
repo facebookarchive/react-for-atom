@@ -4,7 +4,7 @@
   "description": "Require this to get a single instance of React in Atom. Addons are lazily loaded.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=production tap test.js && NODE_ENV=development tap test.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/jgebhardt/react-for-atom#readme",
   "dependencies": {
     "react": "0.14.2"
+  },
+  "devDependencies": {
+    "tap": "^2.2.0"
   }
 }
