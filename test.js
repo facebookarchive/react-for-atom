@@ -15,8 +15,13 @@ test('react-for-atom', function (t) {
 
   var after = Object.keys(require.cache);
 
-  // at least 2 new modules should've been loaded
-  t.ok(after.length - before.length >= 2);
+  if (process.env.NODE_ENV === 'production') {
+    // only 2 new modules should've been loaded
+    t.ok(after.length - before.length === 2);
+  } else {
+    // at least 2 new modules should've been loaded
+    t.ok(after.length - before.length >= 2);
+  }
 
   // reset the module cache
   after.forEach(function(k) {
