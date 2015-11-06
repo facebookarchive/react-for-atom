@@ -2,8 +2,6 @@
 
 Wrapper around [facebook/react](https://github.com/facebook/react), providing the following modifications:
 
-- inject custom DOM properties such as `mini`, which are currently unsupported by React (https://github.com/facebook/react/issues/140)
-
 - Provide `React.addons` lazily to reduce package startup time
 
 ## A single instance of React

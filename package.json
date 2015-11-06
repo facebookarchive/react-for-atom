@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/jgebhardt/react-for-atom#readme",
   "dependencies": {
-    "react": "0.13.2"
+    "react": "0.14.2"
   }
 }
