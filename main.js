@@ -1,6 +1,6 @@
 var React;
 
-if (window) {
+if (typeof window !== 'undefined') {
   // circumvent React Dev Tools console warning
   window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = {};
 }
@@ -26,7 +26,7 @@ if (typeof atom === 'object' && atom !== null) {
     React = atom.__DO_NOT_ACCESS_React_Singleton;
   }
 } else {
-  console.warning("Do not use react-for-atom outside of Atom. Use require('react') instead.");
+  console.log("Do not use react-for-atom outside of Atom. Use require('react') instead.");
 }
 
 module.exports = React;
