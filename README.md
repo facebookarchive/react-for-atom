@@ -2,7 +2,7 @@
 
 Wrapper around [facebook/react](https://github.com/facebook/react), providing the following modifications:
 
-- inject custom DOM properties such as `mini`, which are currently unsupported by React (https://github.com/facebook/react/issues/140)
+- When `process.env.NODE_ENV === 'production`, the minified version of React is loaded to reduce package startup time
 
 - Provide `React.addons` lazily to reduce package startup time
 
@@ -11,7 +11,7 @@ React does not currently play well with other instances of React on the same pag
 
 Since Atom will soon deprecate `atom.react` (which provides an outdated React build), we propose that __Atom package developers wanting to use React require this package__ instead of other variants of React:
 
-```
+```js
 var React = require('react-for-atom');
 
 // optional
