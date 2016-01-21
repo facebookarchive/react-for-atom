@@ -1,6 +1,7 @@
 'use strict';
+/* @flow */
 
-var React;
+var atom = global.atom;
 
 if (typeof window !== 'undefined') {
   // circumvent React Dev Tools console warning
@@ -9,30 +10,21 @@ if (typeof window !== 'undefined') {
 
 if (typeof atom === 'object' && atom !== null) {
   if (typeof atom.__DO_NOT_ACCESS_React_Singleton === 'undefined') {
-    if (process.env.NODE_ENV === 'production') {
-      React = require('react/dist/react-with-addons.min');
-    } else {
-      React = require('react');
-      var addons;
-      Object.defineProperty(React, 'addons', {
-        get: function get() {
-          if (!addons) {
-            React = require('react/addons');
-          }
-          return addons;
-        },
-        set: function set(val) {
-          addons = val;
-        },
-        enumerable: false,
-      });
-    }
-    atom.__DO_NOT_ACCESS_React_Singleton = React;
+    module.exports.cloneWithProps = require('react-addons-clone-with-props');
+    module.exports.createFragment = require('react-addons-create-fragment');
+    module.exports.CSSTransitionGroup = require('react-addons-css-transition-group');
+    module.exports.Perf = require('react-addons-perf');
+    module.exports.PureRenderMixin = require('react-addons-pure-render-mixin');
+    module.exports.React = require('react');
+    module.exports.ReactDOM = require('react-dom');
+    module.exports.shallowCompare = require('react-addons-shallow-compare');
+    module.exports.TestUtils = require('react-addons-test-utils');
+    module.exports.TransitionGroup = require('react-addons-transition-group');
+    module.exports.update = require('react-addons-update');
+    atom.__DO_NOT_ACCESS_React_Singleton = module.exports;
   } else {
-    React = atom.__DO_NOT_ACCESS_React_Singleton;
+    module.exports = atom.__DO_NOT_ACCESS_React_Singleton;
   }
 } else {
   console.log("Do not use react-for-atom outside of Atom. Use require('react') instead.");
 }
-
-module.exports = React;

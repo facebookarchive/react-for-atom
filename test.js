@@ -3,25 +3,20 @@
 var test = require('tap').test;
 
 test('react-for-atom', function (t) {
-  t.plan(6);
+  t.plan(7);
 
   global.atom = {};
   var before = Object.keys(require.cache);
-
-  var React = require('./');
-  var addons = React.addons;
-
-  t.ok(addons);
-
+  var ReactForAtom = require('./');
   var after = Object.keys(require.cache);
 
-  if (process.env.NODE_ENV === 'production') {
-    // only 2 new modules should've been loaded
-    t.ok(after.length - before.length === 2);
-  } else {
-    // at least 2 new modules should've been loaded
-    t.ok(after.length - before.length >= 2);
-  }
+  // at least 10 modules should've been loaded, React and its addons
+  t.ok(after.length - before.length >= 10);
+
+  // ensure React and some of its addons exist
+  t.ok(ReactForAtom.shallowCompare);
+  t.ok(ReactForAtom.PureRenderMixin);
+  t.ok(ReactForAtom.React);
 
   // reset the module cache
   after.forEach(function(k) {
@@ -33,14 +28,11 @@ test('react-for-atom', function (t) {
   // make sure the module cache was reset
   t.same(Object.keys(require.cache), before);
 
-  var React2 = require('./');
-  var addons2 = React.addons;
+  var ReactForAtom2 = require('./');
 
   // only one new module should've been loaded-
   // since React was pulled from the "atom" singleton
   t.equal(Object.keys(require.cache).length, before.length + 1);
-
-  t.equal(React, React2);
-  t.equal(addons, addons2);
+  t.equal(ReactForAtom, ReactForAtom2);
 });
 
