@@ -1,11 +1,17 @@
 'use strict';
 /* @flow */
 
-var atom = global.atom;
+var atom;
 
 if (typeof window !== 'undefined') {
   // circumvent React Dev Tools console warning
   window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = {};
+}
+
+if (typeof global !== 'undefined') {
+  // Atom runs in a Node-like environment where `global === window`. Grab a reference to `atom` from
+  // `global` and otherwise assume this is an environment where 'react-for-atom' is not appropriate.
+  atom = global.atom;
 }
 
 if (typeof atom === 'object' && atom !== null) {
