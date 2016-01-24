@@ -2,20 +2,17 @@
   "name": "react-for-atom",
   "version": "0.14.6",
   "description": "Require this to get a single instance of React in Atom. Addons are lazily loaded.",
+  "keywords": [
+    "atom",
+    "react"
+  ],
+  "license": "BSD-3-Clause",
+  "author": "Jonas Gebhardt <jxg@fb.com>",
   "main": "main.js",
+  "repository": "jgebhardt/react-for-atom",
   "scripts": {
     "test": "NODE_ENV=production tap test.js && NODE_ENV=development tap test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jgebhardt/react-for-atom.git"
-  },
-  "license": "BSD-3-Clause",
-  "author": "Jonas Gebhardt (jxg@fb.com)",
-  "bugs": {
-    "url": "https://github.com/jgebhardt/react-for-atom/issues"
-  },
-  "homepage": "https://github.com/jgebhardt/react-for-atom#readme",
   "dependencies": {
     "react": "0.14.6",
     "react-addons-clone-with-props": "0.14.6",
