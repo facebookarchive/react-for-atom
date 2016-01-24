@@ -21,10 +21,12 @@ const {
   cloneWithProps,
   createFragment,
   CSSTransitionGroup,
+  LinkedStateMixin,
   Perf,
   PureRenderMixin,
   React,
   ReactDOM,
+  ReactDOMServer,
   shallowCompare,
   TestUtils,
   TransitionGroup,
@@ -37,9 +39,3 @@ const {PropTypes} = React;
 
 We plan to closely track the React release cycle in order to be able to use the latest features as
 well as provide access to React API warnings (in `atom --dev` mode).
-
-#### Where is `LinkedStateMixin`?
-
-Data flows in one direction in React, and so 'react-for-atom' explicitly avoids two-way binding. The
-[`LinkedStateMixin`](https://facebook.github.io/react/docs/two-way-binding-helpers.html) is
-intentionally omitted.

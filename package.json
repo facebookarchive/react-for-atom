@@ -18,6 +18,7 @@
     "react-addons-clone-with-props": "0.14.6",
     "react-addons-create-fragment": "0.14.6",
     "react-addons-css-transition-group": "0.14.6",
+    "react-addons-linked-state-mixin": "0.14.6",
     "react-addons-perf": "0.14.6",
     "react-addons-pure-render-mixin": "0.14.6",
     "react-addons-shallow-compare": "0.14.6",

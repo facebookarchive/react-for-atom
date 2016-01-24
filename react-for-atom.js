@@ -19,10 +19,12 @@ if (typeof atom === 'object' && atom !== null) {
     module.exports.cloneWithProps = require('react-addons-clone-with-props');
     module.exports.createFragment = require('react-addons-create-fragment');
     module.exports.CSSTransitionGroup = require('react-addons-css-transition-group');
+    module.exports.LinkedStateMixin = require('react-addons-linked-state-mixin');
     module.exports.Perf = require('react-addons-perf');
     module.exports.PureRenderMixin = require('react-addons-pure-render-mixin');
     module.exports.React = require('react');
     module.exports.ReactDOM = require('react-dom');
+    module.exports.ReactDOMServer = require('react-dom/server');
     module.exports.shallowCompare = require('react-addons-shallow-compare');
     module.exports.TestUtils = require('react-addons-test-utils');
     module.exports.TransitionGroup = require('react-addons-transition-group');
