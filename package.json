@@ -8,10 +8,14 @@
   ],
   "license": "BSD-3-Clause",
   "author": "Jonas Gebhardt <jxg@fb.com>",
+  "files": [
+    "react-for-atom.js",
+    "react-for-atom.js.flow"
+  ],
   "main": "react-for-atom.js",
   "repository": "jgebhardt/react-for-atom",
   "scripts": {
-    "test": "NODE_ENV=production tap test.js && NODE_ENV=development tap test.js"
+    "test": "tap test/*.js"
   },
   "dependencies": {
     "react": "0.14.6",
@@ -28,6 +32,7 @@
     "react-dom": "0.14.6"
   },
   "devDependencies": {
+    "flow-bin": "0.20.1",
     "tap": "^2.2.0"
   }
 }

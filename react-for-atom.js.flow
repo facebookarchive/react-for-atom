@@ -1,0 +1,43 @@
+'use strict';
+/* @flow */
+
+/**
+ * this file is only read by flow. it works around having to set
+ * `unsafe.enable_getters_and_setters`.
+ * https://github.com/facebook/flow/issues/444
+ */
+
+// provided by flow:
+import React from 'react';
+import ReactDOM from 'react-dom';
+// flow's React lib incorrectly declared this module as `react-dom-server`,
+// instead of `react-dom/server`. See https://github.com/facebook/flow/pull/1306
+import ReactDOMServer from 'react-dom-server';
+
+// from `node_modules`:
+import cloneWithProps from 'react-addons-clone-with-props';
+import createFragment from 'react-addons-create-fragment';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+import LinkedStateMixin from 'react-addons-linked-state-mixin';
+import Perf from 'react-addons-perf';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import shallowCompare from 'react-addons-shallow-compare';
+import TestUtils from 'react-addons-test-utils';
+import TransitionGroup from 'react-addons-transition-group';
+import update from 'react-addons-update';
+
+declare export {
+  cloneWithProps,
+  createFragment,
+  CSSTransitionGroup,
+  LinkedStateMixin,
+  Perf,
+  PureRenderMixin,
+  React,
+  ReactDOM,
+  ReactDOMServer,
+  shallowCompare,
+  TestUtils,
+  TransitionGroup,
+  update,
+};

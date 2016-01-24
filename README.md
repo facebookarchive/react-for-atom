@@ -2,19 +2,14 @@
 
 [![Build Status](https://travis-ci.org/jgebhardt/react-for-atom.svg?branch=master)](https://travis-ci.org/jgebhardt/react-for-atom)
 
-Wrapper around [facebook/react](https://github.com/facebook/react), providing the following
-modifications:
+Singleton lazy loading wrapper around [facebook/react](https://github.com/facebook/react).
 
 ## A single instance of React
-React does not currently play well with other instances of React on the same page
-(see [#3252](https://github.com/facebook/react/issues/3252),
-[#2402](https://github.com/facebook/react/issues/2402)).
 
-We propose that __Atom package developers wanting to use React require this package__ instead of
-other variants of React. 'react-for-atom' exports
-[`React`](https://www.npmjs.com/package/react),
-[`ReactDOM`](https://www.npmjs.com/package/react-dom), and all of
-[React's addons](https://facebook.github.io/react/docs/addons.html).
+React does not currently co-exist well with other instances of React in the same environment (see [#3252](https://github.com/facebook/react/issues/3252), [#2402](https://github.com/facebook/react/issues/2402)).
+
+We propose that __Atom package developers wanting to use React require this package__ instead of other variants of React. `react-for-atom` exports
+[`React`](https://www.npmjs.com/package/react), [`ReactDOM`](https://www.npmjs.com/package/react-dom), and all of [React's addons](https://facebook.github.io/react/docs/addons.html).
 
 ```js
 const {
@@ -37,5 +32,18 @@ const {
 const {PropTypes} = React;
 ```
 
-We plan to closely track the React release cycle in order to be able to use the latest features as
-well as provide access to React API warnings (in `atom --dev` mode).
+We plan to closely track the React release cycle in order to be able to use the latest features as well as provide access to React API warnings (in `atom --dev` mode).
+
+## Lazy loading
+
+Only when a property is looked up on the `react-for-atom` export is that module actually `require`'d.
+
+```js
+const ReactForAtom = require('react-for-atom');
+
+// `react` is actually required here
+const {React} = ReactForAtom;
+
+// `TestUtils` is actually required here
+const {TestUtils} = ReactForAtom;
+```

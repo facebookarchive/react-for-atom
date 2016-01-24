@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/fbjs/lib/.*
+.*/node_modules/react/.*
+.*/node_modules/react-dom/.*
+
+.*/flow-export/.*
+
+[include]
+../../
+
+[options]
+esproposal.class_static_fields=enable
+
+[version]
+0.20.1
