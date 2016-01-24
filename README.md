@@ -1,5 +1,7 @@
 # react-for-atom
 
+[![Build Status](https://travis-ci.org/jgebhardt/react-for-atom.svg?branch=master)](https://travis-ci.org/jgebhardt/react-for-atom)
+
 Wrapper around [facebook/react](https://github.com/facebook/react), providing the following
 modifications:
 
