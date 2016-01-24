@@ -8,7 +8,7 @@
   ],
   "license": "BSD-3-Clause",
   "author": "Jonas Gebhardt <jxg@fb.com>",
-  "main": "main.js",
+  "main": "react-for-atom.js",
   "repository": "jgebhardt/react-for-atom",
   "scripts": {
     "test": "NODE_ENV=production tap test.js && NODE_ENV=development tap test.js"
