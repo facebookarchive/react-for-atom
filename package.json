@@ -2,25 +2,27 @@
   "name": "react-for-atom",
   "version": "0.14.6",
   "description": "Require this to get a single instance of React in Atom. Addons are lazily loaded.",
-  "main": "main.js",
-  "scripts": {
-    "test": "NODE_ENV=production tap test.js && NODE_ENV=development tap test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jgebhardt/react-for-atom.git"
-  },
+  "keywords": [
+    "atom",
+    "react"
+  ],
   "license": "BSD-3-Clause",
-  "author": "Jonas Gebhardt (jxg@fb.com)",
-  "bugs": {
-    "url": "https://github.com/jgebhardt/react-for-atom/issues"
+  "author": "Jonas Gebhardt <jxg@fb.com>",
+  "files": [
+    "react-for-atom.js",
+    "react-for-atom.js.flow"
+  ],
+  "main": "react-for-atom.js",
+  "repository": "jgebhardt/react-for-atom",
+  "scripts": {
+    "test": "tap test/*.js"
   },
-  "homepage": "https://github.com/jgebhardt/react-for-atom#readme",
   "dependencies": {
     "react": "0.14.6",
     "react-addons-clone-with-props": "0.14.6",
     "react-addons-create-fragment": "0.14.6",
     "react-addons-css-transition-group": "0.14.6",
+    "react-addons-linked-state-mixin": "0.14.6",
     "react-addons-perf": "0.14.6",
     "react-addons-pure-render-mixin": "0.14.6",
     "react-addons-shallow-compare": "0.14.6",
@@ -30,6 +32,7 @@
     "react-dom": "0.14.6"
   },
   "devDependencies": {
+    "flow-bin": "0.20.1",
     "tap": "^2.2.0"
   }
 }
