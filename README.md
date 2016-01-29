@@ -47,3 +47,9 @@ const {React} = ReactForAtom;
 // `TestUtils` is actually required here
 const {TestUtils} = ReactForAtom;
 ```
+
+## Versioning
+
+Prior to `0.14.6`, `react-for-atom` version numbers were loosely related to the React version in `dependencies`. From that version onward, the version of `react-for-atom` matches the React version.
+
+Changes to `react-for-atom` are reflected in pre-release versions (e.g. `0.14.6-1`). From a semver perspective, this doesn't make sense. However, because you should pin the version of `react-for-atom` anyway, this is a clear workaround for conveying React versioning info.
