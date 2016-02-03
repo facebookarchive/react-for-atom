@@ -10,9 +10,7 @@
 // provided by flow:
 import React from 'react';
 import ReactDOM from 'react-dom';
-// flow's React lib incorrectly declared this module as `react-dom-server`,
-// instead of `react-dom/server`. See https://github.com/facebook/flow/pull/1306
-import ReactDOMServer from 'react-dom-server';
+import ReactDOMServer from 'react-dom/server';
 
 // from `node_modules`:
 import cloneWithProps from 'react-addons-clone-with-props';
