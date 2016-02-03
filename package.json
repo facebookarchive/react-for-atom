@@ -32,7 +32,7 @@
     "react-dom": "0.14.7"
   },
   "devDependencies": {
-    "flow-bin": "0.20.1",
+    "flow-bin": "0.21.0",
     "tap": "^2.2.0"
   }
 }
