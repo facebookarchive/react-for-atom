@@ -1,6 +1,6 @@
 {
   "name": "react-for-atom",
-  "version": "0.14.7-0",
+  "version": "15.0.1-0",
   "description": "Require this to get a single instance of React in Atom. Addons are lazily loaded.",
   "keywords": [
     "atom",
