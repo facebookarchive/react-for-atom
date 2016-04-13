@@ -13,7 +13,6 @@ We propose that __Atom package developers wanting to use React require this pack
 
 ```js
 const {
-  cloneWithProps,
   createFragment,
   CSSTransitionGroup,
   LinkedStateMixin,
