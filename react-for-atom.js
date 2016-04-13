@@ -11,7 +11,6 @@ if (typeof atom.__DO_NOT_ACCESS_React_Singleton === 'undefined') {
     window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = {};
   }
   var exportables = {
-    cloneWithProps: function() { return require('react-addons-clone-with-props'); },
     createFragment: function() { return require('react-addons-create-fragment'); },
     CSSTransitionGroup: function() { return require('react-addons-css-transition-group'); },
     LinkedStateMixin: function() { return require('react-addons-linked-state-mixin'); },

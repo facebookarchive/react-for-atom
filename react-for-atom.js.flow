@@ -13,7 +13,6 @@ import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 
 // from `node_modules`:
-import cloneWithProps from 'react-addons-clone-with-props';
 import createFragment from 'react-addons-create-fragment';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 import LinkedStateMixin from 'react-addons-linked-state-mixin';
@@ -25,7 +24,6 @@ import TransitionGroup from 'react-addons-transition-group';
 import update from 'react-addons-update';
 
 declare export {
-  cloneWithProps,
   createFragment,
   CSSTransitionGroup,
   LinkedStateMixin,
