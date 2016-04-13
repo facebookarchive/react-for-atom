@@ -1,7 +1,6 @@
 /* @flow */
 
 const {
-  cloneWithProps,
   createFragment,
   CSSTransitionGroup,
   LinkedStateMixin,
