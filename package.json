@@ -32,6 +32,6 @@
   },
   "devDependencies": {
     "flow-bin": "0.21.0",
-    "tap": "^2.2.0"
+    "tap": "^5.7.1"
   }
 }
