@@ -1,6 +1,6 @@
 /* @flow */
 
-import {
+import ReactDefault, {
   createFragment,
   CSSTransitionGroup,
   LinkedStateMixin,

@@ -11,6 +11,7 @@ if (typeof atom.__DO_NOT_ACCESS_React_Singleton === 'undefined') {
     window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = {};
   }
   var exportables = {
+    default: function() { return require('react'); },
     createFragment: function() { return require('react-addons-create-fragment'); },
     CSSTransitionGroup: function() { return require('react-addons-css-transition-group'); },
     LinkedStateMixin: function() { return require('react-addons-linked-state-mixin'); },
@@ -42,6 +43,7 @@ if (typeof atom.__DO_NOT_ACCESS_React_Singleton === 'undefined') {
       enumerable: true,
     });
   });
+  Object.defineProperty(module.exports, '__esModule', {value: true});
   atom.__DO_NOT_ACCESS_React_Singleton = module.exports;
 } else {
   module.exports = atom.__DO_NOT_ACCESS_React_Singleton;

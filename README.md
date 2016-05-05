@@ -11,6 +11,8 @@ React does not currently co-exist well with other instances of React in the same
 We propose that __Atom package developers wanting to use React require this package__ instead of other variants of React. `react-for-atom` exports
 [`React`](https://www.npmjs.com/package/react), [`ReactDOM`](https://www.npmjs.com/package/react-dom), and all of [React's addons](https://facebook.github.io/react/docs/addons.html).
 
+### Using CommonJS
+
 ```js
 const {
   createFragment,
@@ -29,6 +31,25 @@ const {
 
 // optional
 const {PropTypes} = React;
+```
+
+### Using (babel transpiled) ES Modules
+
+```js
+// React is the default export
+import React, {
+  ReactDOM,
+  TestUtils,
+  // addons...
+} from 'react-for-atom';
+
+// Or, it's also available as a named export
+import {
+  React,
+  ReactDOM,
+  TestUtils,
+  // addons...
+} from 'react-for-atom';
 ```
 
 We plan to closely track the React release cycle in order to be able to use the latest features as well as provide access to React API warnings (in `atom --dev` mode).

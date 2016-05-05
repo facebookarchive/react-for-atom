@@ -23,6 +23,8 @@ import TestUtils from 'react-addons-test-utils';
 import TransitionGroup from 'react-addons-transition-group';
 import update from 'react-addons-update';
 
+export default React;
+
 export {
   createFragment,
   CSSTransitionGroup,
