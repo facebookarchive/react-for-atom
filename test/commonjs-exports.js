@@ -6,7 +6,7 @@ global.window = {};
 var test = require('tap').test;
 var ReactForAtom = require('../');
 
-test('react-for-atom exports', function (t) {
+test('react-for-atom commonjs exports', function (t) {
   t.plan(12);
   t.equal(ReactForAtom.createFragment, require('react-addons-create-fragment'));
   t.equal(ReactForAtom.CSSTransitionGroup, require('react-addons-css-transition-group'));
