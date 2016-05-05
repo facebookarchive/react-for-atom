@@ -20,7 +20,7 @@ class Home extends React.Component {
     console.log(this.props.title);
   }
 
-  render(): ReactElement {
+  render(): React.Element {
     const {title} = this.props;
     return <h1>{title}</h1>;
   }
