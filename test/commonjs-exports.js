@@ -7,7 +7,8 @@ var test = require('tap').test;
 var ReactForAtom = require('../');
 
 test('react-for-atom commonjs exports', function (t) {
-  t.plan(12);
+  t.plan(13);
+  t.equal(ReactForAtom.default, require('react'));
   t.equal(ReactForAtom.createFragment, require('react-addons-create-fragment'));
   t.equal(ReactForAtom.CSSTransitionGroup, require('react-addons-css-transition-group'));
   t.equal(ReactForAtom.LinkedStateMixin, require('react-addons-linked-state-mixin'));

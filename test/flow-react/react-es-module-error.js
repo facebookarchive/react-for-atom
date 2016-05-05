@@ -1,6 +1,6 @@
 /* @flow */
 
-const {React, ReactDOM, ReactDOMServer} = require('../..');
+import {React, ReactDOM, ReactDOMServer} from '../..';
 
 class Home extends React.Component {
   props: {

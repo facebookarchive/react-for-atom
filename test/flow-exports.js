@@ -18,7 +18,16 @@ var ERRORS = [
   'Property not found in',
   'exports-commonjs-error.js:7:5,20: CommonJS exports of "../.."',
   '',
-  'Found 3 errors',
+  'exports-es-module-error.js:4:3,3: Named import from module `../..`',
+  'This module has no named export called `a`.',
+  '',
+  'exports-es-module-error.js:5:3,3: Named import from module `../..`',
+  'This module has no named export called `b`.',
+  '',
+  'exports-es-module-error.js:6:3,3: Named import from module `../..`',
+  'This module has no named export called `c`.',
+  '',
+  'Found 6 errors',
   '',
 ].join('\n');
 
