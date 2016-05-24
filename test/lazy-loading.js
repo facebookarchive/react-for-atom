@@ -19,6 +19,10 @@ test('react-for-atom lazy loading', function (t) {
   Object.keys(ReactForAtom1).forEach(function(key) { ReactForAtom1[key]; });
   var after1 = Object.keys(require.cache);
 
-  // verify module loading - must be some large number
-  t.ok(after1.length - before.length > 100);
+  // verify module loading - must be some large number in development
+  if (process.env.NODE_ENV === 'production') {
+    t.equal(after1.length - before.length, 2);
+  } else {
+    t.ok(after1.length - before.length > 100);
+  }
 });

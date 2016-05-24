@@ -15,7 +15,7 @@
   "main": "react-for-atom.js",
   "repository": "jgebhardt/react-for-atom",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "NODE_ENV=development tap test/*.js && NODE_ENV=production tap test/*.js"
   },
   "dependencies": {
     "react": "15.0.2",
