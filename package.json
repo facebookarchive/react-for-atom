@@ -18,21 +18,21 @@
     "test": "NODE_ENV=development tap test/*.js && NODE_ENV=production tap test/*.js"
   },
   "dependencies": {
-    "react": "15.0.2",
-    "react-addons-create-fragment": "15.0.2",
-    "react-addons-css-transition-group": "15.0.2",
-    "react-addons-linked-state-mixin": "15.0.2",
-    "react-addons-perf": "15.0.2",
-    "react-addons-pure-render-mixin": "15.0.2",
-    "react-addons-shallow-compare": "15.0.2",
-    "react-addons-test-utils": "15.0.2",
-    "react-addons-transition-group": "15.0.2",
-    "react-addons-update": "15.0.2",
-    "react-dom": "15.0.2"
+    "react": "15.2.1",
+    "react-addons-create-fragment": "15.2.1",
+    "react-addons-css-transition-group": "15.2.1",
+    "react-addons-linked-state-mixin": "15.2.1",
+    "react-addons-perf": "15.2.1",
+    "react-addons-pure-render-mixin": "15.2.1",
+    "react-addons-shallow-compare": "15.2.1",
+    "react-addons-test-utils": "15.2.1",
+    "react-addons-transition-group": "15.2.1",
+    "react-addons-update": "15.2.1",
+    "react-dom": "15.2.1"
   },
   "devDependencies": {
     "babel-core": "^5.8.38",
-    "flow-bin": "0.24.0",
-    "tap": "^5.7.1"
+    "flow-bin": "0.29.0",
+    "tap": "^6.2.0"
   }
 }
